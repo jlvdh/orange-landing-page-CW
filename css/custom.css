@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+
+
+/* GENERAL STYLING */
+html {
+  /* this is for the links that we have in the navbar
+  so when we click on them we go to the section smoothly */
+  scroll-behavior: smooth;
+  /* We define variables for the colors */
+  --body-bg: #fffcfb; 
+  --orange: #f8765e;
+  --dark-blue: #031d5b;
+  --light-blue: #9bdbe7;
+  --shadow: rgba(0, 0, 0, 0.15);
+  --copy: #5b6c94;
+  --grey: #cdcdcd;
+  --btn-active: rgba(140,200,215,1);
+  --second-testimonial: #7c7c7c;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: var(--body-bg);
+}
+
+p {
+  line-height: 2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--orange);
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+h3 {
+  color: var(--dark-blue);
+  font-size: 34px;
+  margin: 17px 0 59px 0;
+}
+
+input {
+  float: left;
+  box-shadow: inset 0 1px 5px 0 var(--shadow);
+  padding: 18px 20px;
+  border-radius: 20px;
+  width: 60%;
+  border: none;
+  margin-right: 16px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: var(--grey);
+  transition: 0.7s;
+}
+
+input:focus {
+  box-shadow: 0 0 5px var(--light-blue);
+}
+
+input:focus::placeholder {
+  opacity: 0.2
+}
+
+button {
+  color: white;
+  background-color: var(--light-blue);
+  padding: 18px 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  box-shadow: 2px 2px 8px 0 var(--shadow);
+  border: none;
+  transition: 0.3s;
+}
+
+button:focus {
+  box-shadow: inset 0 3px 5px 0 var(--shadow);
+  background-color: var(--btn-active);
+}
+
+button:hover {
+  background-color: var(--btn-active);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--dark-blue);
+}
+
+
+/* NAV */
+
+nav {
+  padding: 25px 8.3%;
+  color: #ffffff;
+  background: var(--orange);
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  box-sizing: border-box;
+}
+
+/* We select the anchor tag (a) that is a DIRECT child of nav */
+nav > a {
+  font-size: 26px;
+  font-weight: 700
+}
+
+nav div a {
+  margin-left: 40px;
+}
+
+
+/* HEADER */
+
+header {
+  padding-left: 8.3%;
+  color: white;
+  background: var(--orange);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .copy {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+header form {
+  margin-top: 80px;
+}
+
+header img {
+  width: 50%;
+  transition: transform 0.5s;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
+/* BENEFITS SECTION */
+
+#benefit {
+  color: var(--copy);
+  font-weight: normal;
+  padding: 70px 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  margin: -40px 8.3% 0px 8.3%;
+  background: white;
+  box-sizing: border-box;
+  box-shadow: 0 10px 34px 0 var(--shadow);
+}
+
+#benefit img {
+  margin: 0 auto 60px auto;
+  display: block;
+  /* I'm giving the height so all the titles that come after start at the same place */
+  height: 120px;
+}
+
+#benefit .second-col {
+  margin: 0px 100px;
+}
+
+.title {
+  color: var(--dark-blue);
+}
+
+.divider {
+  width: 60px;
+  height: 5px;
+  background-color: var(--orange);
+}
+
+/* PRICING SECTION */
+
+.row {
+  display: flex;
+  padding: 200px 8.3%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.copy-content {
+  text-align: right;
+  width: 50%;
+}
+
+.copy-content p {
+  color: var(--copy);
+}
+
+.background-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  width: 494px;
+  height: 494px;
+  background-color: var(--orange);
+}
+
+.background-circle img {
+  transition: transform 1s;
+}
+
+/* We rotate the image on hover */
+.background-circle img:hover {
+  transform: rotate(10deg);
+}
+
+/* TESTIMONIALS */
+
+.customer-container {
+  margin-left: 8.3%;
+  display: flex;
+  position: relative;
+}
+
+.customer-container h2 {
+  font-weight: 300
+}
+
+.left-column {
+  width: 41.7vw;
+  background-image: url("../images/quote.png");
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  padding-left: 25px;
+}
+
+.right-column {
+  width: 50vw;
+  background-color: var(--orange);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 10% 0px;
+}
+
+.testimonial-container {
+  margin-left: -25%;
+  display: flex;
+}
+
+.testimonial-column {
+  width: 420px;
+  height: 330px;
+  background-color: var(--light-blue);
+  border-radius: 20px;
+  box-shadow: 12px 12px 40px 0 var(--shadow);
+  margin-right: 60px;
+  padding: 80px 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: 0.5s;
+}
+
+.testimonial-sub {
+  margin-top: auto;
+}
+
+.second-column {
+  background-color: white;
+  margin-right: 120px;
+  color: var(--second-testimonial);
+}
+
+.testimonial-column:hover {
+  transform: scale(1.02)
+}
+
+.testimonial-company {
+  opacity: 0.7
+}
+
+/* SUBSCRIBE SECTION */
+.second-row {
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-row form {
+  width: 50%;
+}
+
+.row > h3 {
+  color: var(--grey);
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.32;
+}
+
+/* FOOTER */
+
+footer {
+  color: white;
+  background: var(--orange);
+  text-align: center;
+  padding: 40px 0px;
+}
+
+.second-p {
+  word-spacing: 20px;
+}
+
+
+/* MEDIA QUERY */
+/* mobiles and tablets */
+
+@media (max-width: 600px) {
+
+  nav {
+    flex-direction: column;
+    height: 20vmax;
+    justify-content: center;
+  }
+
+  header .copy {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  header {
+    height: auto;
+    padding: 10% 10% 30% 10%;
+    flex-direction: column-reverse;
+  }
+
+  header img {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .first-link {
+    margin: 0;
+  }
+
+  header form {
+    margin-top: 30px;
+
+    text-align: center;
+  }
+
+  input {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  button {
+    margin-top: 20px;
+  }
+
+  #benefit {
+    flex-direction: column;
+  }
+
+  .second-col {
+    margin: 0px;
+  }
+
+  .col {
+    margin-top: 60px;
+  }
+
+  .row {
+    padding: 100px 10%;
+    flex-direction: column;
+  }
+
+
+  .copy-content {
+    text-align: center;
+    width: 100%;
+    margin-top: 60px;
+  }
+
+
+  .second-row form {
+    width: 100%;
+  }
+
+  /* horizontal scroll / swipe */
+
+  .swipe-container {
+    overflow-x: auto;
+    margin-left: -45%;
+  }
+
+  .customer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  .customer-container h2 {
+    /* should be 16px on mobile */
+    font-size: 32px; 
+  }
+
+  .left-column {
+    background-size: contain;
+    margin-left: 8.3%;
+    margin-bottom: 8.3%;
+  }
+
+  .right-column {
+    width: 70vw;
+    margin-left: 30vw;
+  }
+
+  .testimonial-column {
+    margin: 20%;
+    height: 50vmax;
+  }
+
+  .testimonial-column p {
+    width: 65vw;
+  }
+
+  .background-circle {
+    width: 40vh;
+    height: 40vh;
+  }
+
+  .background-circle img {
+    height: 50vh;
+  }
+
+}
