@@ -58,7 +58,6 @@ a {
   transition: 0.3s;
 }
 
-/* do uppercase first link */
 
 a:hover {
   color: var(--dark-blue);
@@ -112,12 +111,13 @@ button:hover {
 
 
 /* NAV */
+/* do uppercase first link */
 
 nav {
   padding: 25px 8.3%;
   color: #ffffff;
   background: var(--orange);
-  position: sticky;
+  position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
@@ -196,7 +196,7 @@ header img:hover {
   margin: 0px 100px;
 }
 
-.title {
+h4 {
   color: var(--dark-blue);
 }
 
