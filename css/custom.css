@@ -379,7 +379,7 @@ footer {
   nav {
     flex-direction: column;
     height: 20vmax;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   header .copy {
@@ -424,7 +424,7 @@ footer {
     flex-direction: column;
   }
 
-  .second-col {
+  #benefit .second-col {
     margin: 0px;
   }
 
